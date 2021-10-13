@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from abelay.github.io/6828seminar/project.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 10:45:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <title>13755: Implementation of Database Systems</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Implementation of Database Systems - 13755</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Overview</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link active" href="Syllabus.html">Syllabus<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="schedule.html">Schedule</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <i>Fall, 2021</i>
+    </span>
+  </div>
+</nav>
+
+<div class="container-fluid">
+
+<!-- SCHEDULE SECTION -->
+<div class="col-lg-10 my-3 mx-auto">
+
+<h1>Implementation of Database Systems: Syllabus</h1>
+<p>You can download a PDF version of this syllabus <a href="idbms-syllabus.pdf">here</a></p>
+<h2>Prerequisites</h2>
+<p>
+An undergraduate-level understanding of Relational Databases Concepts, Data Structures, and Algorithms Design & Analysis. 
+
+<h2>Objectives</h2>
+<p>This is an upper-level course on the internals of database management systems. This course is on the design and implementation of database management systems. Topics include storage models (n-ary, decomposition), storage architectures (heaps, log-structured), indexing (order preserving trees, hash tables), transaction processing (ACID, concurrency control), recovery (logging, checkpoints), query processing (joins, sorting, aggregation, optimization), and parallel architectures (multi-core, distributed). Upon successful completion of this course, the student should be able to: Implement a disk-oriented database storage manager with table heaps and indexes. Understand, compare, and implement the fundamental concurrency control algorithms. Implement database recovery algorithms and verify their correctness. Identify trade-offs among database systems techniques and contrast distributed/parallel alternatives for both on-line transaction processing and on-line analytical workloads. Interpret and comparatively criticize database system architectures. 
+<ul>
+  <li>Introduction
+    <ul>
+      <li>
+        Review Relational Theory Concepts
+      </li>
+      <li>
+        Review Relational Algebra
+      </li>
+      <li>
+        Review SQL Languages
+      </li>
+      <li>
+        History of Data Models and Database Systems
+      </li>
+    </ul>
+  </li>
+  <li>Physical Storage Systems
+    <ul>
+      <li>
+        Overview of Physical Storage Media
+      </li>
+      <li>
+        Storage Interfaces
+      </li>
+      <li>
+        Magnetic Disks
+      </li>
+      <li>
+        Flash Memory
+      </li>
+    </ul>
+  </li>
+  <li>Data Storage Structures
+    <ul>
+      <li>
+        File Organization
+      </li>
+      <li>
+        Organization of Records in Files
+      </li>
+      <li>
+        Data-Dictionary Storage
+      </li>
+      <li>
+        Database Buffer
+      </li>
+    </ul>
+  </li>
+  <li>Indexing
+    <ul>
+      <li>
+        Ordered Indices
+      </li>
+      <li>
+        B+ Tree Index Files
+      </li>
+      <li>
+        B+ Tree Extensions
+      </li>
+      <li>
+        Hash Indices
+      </li>
+    </ul>
+  </li>
+  
+  <li>Query Processing
+    <ul>
+      <li>
+        Measures of Query Cost
+      </li>
+      <li>
+        Selection Operation
+      </li>
+      <li>
+        Sorting
+      </li>
+      <li>
+        Join Operation
+      </li>
+    </ul>
+  </li>
+  
+  <li>Query Optimization
+    <ul>
+      <li>
+        Transformation of RelationalExpressions
+      </li>
+      <li>
+        Estimating Statistics of ExpressionResults
+      </li>
+      <li>
+        Choice of Evaluation Plans
+      </li>
+      <li>
+        Materialized Views
+      </li>
+      <li>
+        Advanced Topics in QueryOptimization
+      </li>
+    </ul>
+  </li>
+  
+  <li>Transactions
+    <ul>
+      <li>
+        Transaction Concept
+      </li>
+      <li>
+        Transaction Atomicity and Durability
+      </li>
+      <li>
+        Transaction Isolation
+      </li>
+      <li>
+        Serializability
+      </li>
+      <li>
+        Implementation of Isolation Levels
+      </li>
+    </ul>
+  </li>
+  
+  <li>Concurrency Control
+    <ul>
+      <li>
+        Lock-Based Protocols
+      </li>
+      <li>
+        Deadlock Handling
+      </li>
+      <li>
+        Multiple Granularity
+      </li>
+      <li>
+        Timestamp-Based Protocols
+      </li>
+      <li>
+        Validation-Based Protocols
+      </li>
+      <li>
+        Multiversion Schemes
+      </li>
+      <li>
+        Snapshot Isolation
+      </li>
+      <li>
+        Weak Levels of Consistency inPractice
+      </li>
+      <li>
+        Recovery from deadlock
+      </li>
+    </ul>
+  </li>
+  
+  <li>Recovery System
+    <ul>
+      <li>
+        Failure Classification
+      </li>
+      <li>
+        Recovery and Atomicity
+      </li>
+      <li>
+        Recovery Algorithms
+      </li>
+      <li>
+        Buffer Management
+      </li>
+      <li>
+        Failure with Loss of Non-Volatile Storage
+      </li>
+      <li>
+        High Availability Using Remote Backup Systems
+      </li>
+      <li>
+        Early Lock Release and Logical Undo Operations
+      </li>
+      <li>
+        ARIES
+      </li>
+    </ul>
+  </li>
+  
+  <li>Database-System Architectures
+    <ul>
+      <li>
+        Parallel Systems
+      </li>
+      <li>
+        Distributed Systems
+      </li>
+      <li>
+        Cloud-Based Services
+      </li>
+    </ul>
+  </li>
+  
+  <li>Parallel and Distributed Storage
+    <ul>
+      <li>
+        Data Partitioning
+      </li>
+      <li>
+        Dealing with Skew in Partitioning
+      </li>
+      <li>
+        Replication
+      </li>
+      <li>
+        Parallel Indexing
+      </li>
+      <li>
+        Distributed File Systems
+      </li>
+      <li>
+        Parallel Key-Value Stores
+      </li>
+    </ul>
+  </li>
+  
+  <li>Parallel and Distributed Query Processing
+    <ul>
+      <li>
+        Parallel Sort
+      </li>
+      <li>
+        Parallel Join
+      </li>
+      <li>
+        Parallel Evaluation of Query Plans
+      </li>
+      <li>
+        Query Processing on Shared-Memory Architectures
+      </li>
+      <li>
+        Query Optimization for Parallel Execution 
+      </li>
+      <li>
+        Parallel Processing of Streaming Data
+      </li>
+      <li>
+        Distributed Query Processing  
+      </li>
+    </ul>
+  </li>
+  
+  <li>Parallel and Distributed Transaction Processing
+    <ul>
+      <li>
+        Distributed Transactions
+      </li>
+      <li>
+        Commit Protocols
+      </li>
+      <li>
+        Concurrency Control in Distributed Databases
+      </li>
+    </ul>
+  </li>
+  
+</ul>
+
+<h2>Main References</h2>
+
+<p>Our Lectuers are mainly based-on this book.
+  <ul>
+    <li>
+    	Abraham Silberschatz, Henry F. Korth, S. Sudarshan, Database System Concepts, McGraw-Hill, 7th ed, 2020.
+    </li>
+  </ul>
+
+<h2>Supplementary References</h2>
+<p>We also use these references for complementary discussion.
+  <ul>
+  
+  <li>Goetz Graefe, On Transactional Concurrency Control, Morgan & Claypool, 2019.</li>
+  
+  <li>M. Tamer Ozsu, Patrick Valduriez, Principles of Distributed Database Systems, Springer, 4th ed, 2020.</li>
+  
+  <li>Gerhard Weikum, Gottfried Vossen, Transactional Information Systems Theory, Algorithms, and the Practice of Concurrency Control and Recovery, Morgan Kaufmann, 2001.</li>
+  
+  <li>Jim Gray, Andreas Reuter, Transaction Processing: Concepts and Techniques, Morgan Kaufmann, 1993.</li>
+  
+  <li>Philip A. Bernstein, Eric Newcomer, Principles of Transaction Processing, Morgan Kaufmann, 2nd ed, 2009.</li>
+  
+  <li>Sam S. Lightstone, Toby J.
+Teorey, Tom Nadeau, Physical Database Design: The Database Professional's Guide to Exploiting Indexes, Views, Storage, and More, Morgan Kaufmann, 4th ed, 2007.</li>
+  
+  <li>Nicolas Bruno, Automated Physical Database Design and Tuning, CRC Press, 2011.</li>
+  
+  </ul>
+  
+<h2>Useful Links</h2>
+<p>Courses with Video Lectures.
+  <ul>
+  <li><a href="https://15445.courses.cs.cmu.edu/fall2021/">CMU 15-445/645 Database Systems, Carnegie Mellon University, Fall 2021.</a></li>
+  
+  <li><a href="https://15445.courses.cs.cmu.edu/fall2019/">CMU 15-445/645 Database Systems, Carnegie Mellon University, Fall 2019.</a></li>
+  
+  <li><a href="https://15445.courses.cs.cmu.edu/fall2018/">CMU 15-445/645 Database Systems, Carnegie Mellon University, Fall 2018.</a></li>
+  
+  <li><a href="https://15445.courses.cs.cmu.edu/fall2017/">CMU 15-445/645 Database Systems, Carnegie Mellon University, Fall 2017.</a></li>
+  
+  <li><a href="https://15721.courses.cs.cmu.edu/spring2020/">CMU 15-721 Advanced Database Systems, Carnegie Mellon University, Spring 2020.</a></li>
+  
+  <li><a href="{https://15721.courses.cs.cmu.edu/spring2019/">CMU 15-721 Advanced Database Systems, Carnegie Mellon University, Spring 2019.</a></li>
+  
+  <li><a href="https://15721.courses.cs.cmu.edu/spring2018/">CMU 15-721 Advanced Database Systems, Carnegie Mellon University, Spring 2018.</a></li>
+  
+  <li><a href="https://15721.courses.cs.cmu.edu/spring2017/">CMU 15-721 Advanced Database Systems, Carnegie Mellon University, Spring 2017.</a></li>
+  
+  <li><a href="https://15721.courses.cs.cmu.edu/spring2016/">CMU 15-721 Advanced Database Systems, Carnegie Mellon University, Spring 2016.</a></li>
+  
+  </ul>
+
+<p>Seminars.
+  <ul>
+  
+  <li><a href="https://db.cs.cmu.edu/seminar2021-dose2/">Vaccination Database Tech Talks Second Dose - 2021.</a></li>
+  
+  <li><a href="https://db.cs.cmu.edu/seminar2021/">Vaccination Database Tech Talks First Dose - 2021.</a></li>
+  
+  <li><a href="https://db.cs.cmu.edu/seminar2020/">Quarantine Database Tech Talks - 2020.</a></li>
+  
+  <li><a href="https://db.cs.cmu.edu/seminar2018/">Hardware Accelerated Database Lectures - Fall 2018.</a></li>
+  
+  <li><a href="https://db.cs.cmu.edu/seminar2017/">Time Series Database Lectures - Fall 2017.</a></li>
+  
+  <li><a href="https://db.cs.cmu.edu/seminar2015/">The Databaseology Lectures - Fall 2015.</a></li>
+  
+  <li><a href="https://db.cs.cmu.edu/seminar2014/">Seven Databases in Seven Weeks - Fall 2014.</a></li>
+  
+  <li><a href="https://stonebraker70.com/">A Celebration of Mike Stonebraker - 2014.</a></li>
+  
+  </ul>
+  
+<p>Reasearch Groups in Database Systems.
+  <ul>
+  
+  <li><a href="https://db.cs.cmu.edu/">Carnegie Mellon Database Group.</a></li>
+  
+  <li><a href="http://db.csail.mit.edu/">MIT Database Group.</a></li>
+  
+  <li><a href="http://dsg.csail.mit.edu/">MIT Data Systems Group.</a></li>
+  
+  <li><a href="https://dsf.berkeley.edu/">UC Berkeley Data Systems and Foundations.</a></li>
+  
+  <li><a href="http://infolab.stanford.edu/">Stanford Infolab Group.</a></li>
+  
+  <li><a href="https://db.cs.washington.edu/">University of Washington's database group.</a></li>
+  
+  <li><a href="https://database.cs.wisc.edu/">UW-Madison Database Group.</a></li>
+  
+  <li><a href="https://dbdb.io/">Database of Databases</a></li>
+  
+  </ul>
+  
+<p>Books website.
+  <ul>
+  
+  <li><a href="https://www.db-book.com/db7/index.html">Database System Concepts.</a></li>
+  
+  </ul>
+  
+<p>Our passed Semesters Audio Lectures.
+  <ul>
+  
+  <li><a href="https://t.me/osanddb">7232 Principles of Database Design, IAU South Tehran Branch, Fall 2018.</a></li>
+  
+  <li><a href="https://t.me/rdb96">7232 Principles of Database Design, IAU South Tehran Branch, Spring 2017.</a></li>
+  
+  </ul>        
+  
+</div>
+</div>
+
+</body>
+
+<!-- Mirrored from abelay.github.io/6828seminar/project.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 10:45:07 GMT -->
+</html>
